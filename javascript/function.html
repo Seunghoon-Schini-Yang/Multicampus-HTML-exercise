@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script type="text/javascript">
+        (function() {
+            alert("함수 호출 없이 자동 실행!");
+            })();
+
+        // 함수 선언 방법 1
+        function start(){ // button click 할 때 호출
+            var answer = confirm("배경색을 변경하시겠습니까?");
+            if(answer==true)
+                changeColor(); // 다른 함수 호출
+            else
+                alert("취소하였습니다.");
+                }
+
+        // 함수 선언 방법 2
+        changeColor = function(){ // start() 함수에서 호출
+            document.write("배경색 변경");
+            document.bgColor = "green";
+            // document.body.style.background="green";
+            }
+        start();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ifEx2</title>
+    <script type="text/javascript">
+
+        pd_no = prompt("상품번호 입력");
+
+        if(pd_no==1){
+            pd_name = "노트북";
+            price = 1200000;
+            pd_cnt = parseInt(prompt("주문수량 입력"));}
+        else if(pd_no==2){
+            pd_name = "운동화";
+            price = 100000;
+            pd_cnt = parseInt(prompt("주문수량 입력"));}
+        else
+            alert("잘못입력하였습니다.");
+            document.write("종료합니다");
+
+        tot = price * pd_cnt;
+
+        if(tot >= 1000000)
+            discnt = tot * 0.1;
+        else if(tot >= 500000)
+            discnt = tot * 0.05;
+        else
+            discnt = 0;
+
+        document.write("상품명 : " + pd_name + "<br>");
+        document.write("가격 : " + price + "원" + "<br>");
+        document.write("주문수량 : " + pd_cnt + "개" + "<br>");
+        document.write("주문액 : " + tot + "원" + "<br>");
+        document.write("할인액 : " + discnt + "원" + "<br>");
+        document.write("총지불액 : " + (tot - discnt) + "원");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

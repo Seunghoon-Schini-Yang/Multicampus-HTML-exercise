@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseEvent</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var birdImg = document.getElementById('birdImg');
+
+            // 이미지에 마우스 올렸을 때 event 처리
+            birdImg.onmouseover = function() {
+                birdImg.style.opacity = 0.5; // opacity 변경
+            }
+
+            birdImg.onmouseout = function() {
+                birdImg.style.opacity = 1; // opacity 변경
+            }
+        }
+
+        document.oncontextmenu = function() {  // 문서상에서 오른쪽 버튼 클릭했을 때 이벤트 처리
+            alert("마우스 오른쪽 버튼 사용을 금지합니다.") ;
+            return false; // context menu 출력을 false로 전달해서 종료
+        }
+    </script>
+</head>
+<body>
+    <img id="birdImg" src="image/bird.jpg">
+</body>
+</html>

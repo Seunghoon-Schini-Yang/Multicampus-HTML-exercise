@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#wrap div {
+    border:solid 1px black;
+    width:600px;
+    margin:0 auto;
+    text-align:center;
+    }
+
+#topMenu {
+    background-color:#0f0;
+    text-align:right;
+    textcolor:white;
+    }

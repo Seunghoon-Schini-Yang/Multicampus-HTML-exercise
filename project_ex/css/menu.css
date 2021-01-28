@@ -1,0 +1,140 @@
+@charset "UTF-8"
+/* menu.css */
+
+/********* Top Menu *********/
+#topMenuBox {
+    float:right; /* 오른쪽 정렬 */
+    font-weight:bold;
+    padding-right:10px;
+}
+
+/* 모든 <ul> tag에 적용 */
+ul {
+    margin-top:0;
+    padding:0;
+    list-style:none; /* type 없음 */
+}
+
+/********** Main Menu *********/
+#mainMenuBox {
+    width:1280px;
+    height:35px;
+    line-height:35px;
+    background-color:#ffffff; /* white */
+    z-index:10; /* scroll 할 때 위에 오도록 */
+    border-top:solid #CCC 1px;
+    border-bottom:solid #CCC 1px;
+}
+
+#mainMenuBox ul {
+    margin:0;
+}
+
+#mainMenuBox li {
+    float:left; /* 한 줄로 왼쪽 정렬 */
+    text-align:center;
+    width:16%;
+    height:30px;
+    line-height:30px;
+}
+
+#mainMenuBox li:first-child { /* 첫번째 메뉴 항목 */
+    width:19%; /* 20% 이지만 border 때문에 19%로 */
+    border:solid 3px black;
+}
+
+#mainMenuBox ul li a {
+    text-decoration:none; /* <a> tag 밑줄 없애기 */
+    color:black;
+    font-size:14px;
+    font-weight:bold;
+}
+
+#mainMenuBox ul li a:hover { /* 각 menu 항목에 마우스 올렸을 때 */
+    color:red;
+}
+
+/************* Sub Menu *************/
+
+#subMenuBox {
+    width:1280px;
+    height:160px;
+    background-color:white;
+    text-align:center;
+    z-index:10; /* 슬라이드쇼 박스 위로 드롭다운 하도록 */
+    padding-bottom:0;
+    position:absolute;
+    visibility:hidden; /* 시작시 sub menu 항목 숨김 영역도 사라짐 */
+}
+
+/* subMenuBox item */
+.subMenuItem {
+    width:15%;
+    background-color:white;
+    border-left:solid #CCC 1px;
+    border-right:solid #CCC 1px;
+    margin-top:10px;
+}
+
+/* 첫번째 submenu 항목 (왼쪽에서 5% 위치) 각 menu가 15%씩 왼쪽 여백이 증가되도록 설정 */
+#subMenuItem1 {
+    position:absolute;
+    margin-left:5%;
+}
+#subMenuItem2 {
+    position:absolute;
+    margin-left:20%;
+}
+#subMenuItem3 {
+    position:absolute;
+    margin-left:35%;
+}
+#subMenuItem4 {
+    position:absolute;
+    margin-left:50%;
+}
+#subMenuItem5 {
+    position:absolute;
+    margin-left:65%;
+}
+#subMenuItem6 {
+    position:absolute;
+    margin-left:80%;
+}
+
+.subMenuItem ul {
+    background-color:white;
+}
+.subMenu ul li {
+    height:35px;
+    line-height:35px;
+}
+.subMenuItem li a {
+    display:inline-block; /* <a> tag는 기본적으로 inline 속성 갖고있음 */
+    color:#333333;
+    text-decoration:none;
+}
+.subMenuItem a:hover {
+    background-color:white;
+    text-decoration:underline;
+    color:black;
+}
+
+/************ bottomMenuBox *************/
+
+#bottomMenuBox{
+    height:30px;
+    line-height:30px;
+}
+
+#bottomMenuBox li{
+    display:inline-block;
+    text-align:center;
+    padding:5px;
+}
+
+#bottomMenuBox a{
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+}

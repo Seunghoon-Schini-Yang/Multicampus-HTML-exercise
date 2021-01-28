@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>windowResize</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).resize(function(){
+                // window size 알아와서
+                var winWidth = $(window).width();
+                var winHeight = $(window).height();
+
+                // <hr>에 출력
+                $('h3').text("window size : " + winWidth + "x" + winHeight);
+
+                // window 가로 넓이에 따라 window 배경색 변경
+                // size에 따라 변경할 색상값을 변수에 저장
+                var bgColor;
+                if(winWidth >= 1300)
+                    bgColor='green';
+                else if(winWidth >= 700)
+                    bgColor='yellow';
+                else
+                    bgColor='red';
+
+                // 변수에 저장된 색상값에 따라 문서 배경색 변경
+                $('body').css('background-color',bgColor);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3></h3>
+</body>
+</html>

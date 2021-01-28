@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dynamicEvent</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // createBtn 을 click 했을 때
+            $('#createBtn').on('click',function(){
+                $(this).after("<p><input type='button' id='newBtn1' value='새버튼1'>" +
+                              "<p><input type='button' id='newBtn2' value='새버튼2'>");
+           });
+
+           $('#newBtn1').click(function(){ // 이 방식은 동적 연결 안됨
+                alert("새버튼 1 클릭했습니다.");
+           });
+
+           // $('#newBtn2').on('click',function(){ // 이것도 안됨, ready 하는 순간 newBtn2 존재하지 않기 때문
+
+           // 동적 연결 방식
+           $(document).on('click','#newBtn2',function(){ // 이건 document 에서 찾기 대문에 작동함
+                alert("새버튼 2 클릭했습니다.");
+           });
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="createBtn" value="새버튼만들기">
+</body>
+</html>

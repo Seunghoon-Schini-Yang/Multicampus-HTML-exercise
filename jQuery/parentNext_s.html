@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>조상/부모/형제 요소 선택자</title> 
+        <style type="text/css">
+			div {
+				border:1px solid #000000;
+				padding:10px;
+				display:inline-block;
+			}
+		</style>
+        <script src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('p').parents().css('backgroundColor','yellow'); // <p> tag 기준 모든 조상 (body, html 포함)
+				// backgroundColor, background-color, background 모두 동일
+				$('p').parents('#area').css('backgroundColor','white'); // <p> tag 기준 조상 중 id가 area인 조상
+				$('p').parents('#c1,#c2').css('backgroundColor','red'); // 여러 요소 가져오는 것도 가능
+				$('p').parent().css('backgroundColor','green'); // <p> tag의 부모
+				$('#c1').next().css('backgroundColor','pink'); // 바로 다음 형제 요소 - #c2
+				$('#c1').nextAll().css('backgroundColor','orange'); // 다음 형제 요소들 모두 바꾸기
+				$('#c4').prevAll().css('backgroundColor','blue'); // 이전 형제 요소들 모두 바꾸기
+				$('#c1').nextUntil('#c4').css('borderRadius','20px'); // c1 다음 c4 미만 = c2, c3
+				$('#c3').prevUntil('#c1').css('border','solid 5px red'); // c3 미만 c1 다음 = c2
+			});
+		</script>               
+	</head>
+	<body>		
+        <h3>조상/부모/형제 요소 선택자</h3>      
+        <div id="area">  
+        	area 영역 
+            <div id="c1">
+            	c1영역
+                <div id="s1">
+                	s1 영역
+                    <p>p</p>
+            	</div>
+            </div>	 
+            <div id="c2">
+            	c2영역
+                <div id="s2">
+                	s2 영역
+                	<p>p</p>
+            	</div>
+            </div>
+            <div id="c3">
+            	c3영역
+                <div id="s3">
+                	s3 영역
+                	<p>p</p>
+            	</div>
+            </div>
+            <div id="c4">
+            	c4영역
+                <div id="s4">
+                	s4 영역
+                	<p>p</p>
+            	</div>
+            </div>
+         </div>   	
+	</body>
+</html>

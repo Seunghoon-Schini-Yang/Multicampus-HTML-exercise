@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eventBubbling방지</title>
+    <style type="text/css">
+        #parent {border:solid 1px blue;}
+        #child {border:solid 1px red; width:20%;}
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#parent').on('click',function(){
+                alert('parent');
+            });
+
+            $('#child').on('click',function(e){
+                e.stopPropagation(); // 이거 안하면 alert 두번 뜸. parent, child
+                alert("child");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="parent">
+        <div id="child">클릭</div>
+    </div>
+</body>
+</html>

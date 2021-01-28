@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout()</title>
+    <script type="text/javascript">
+        function openInfo() { // 공지사항 창을 출력하는 함수
+        win = window.open("msgwindow.html","setTimeout","width=300, height=200");
+        }
+        // msgWindow.html 창이 닫히고 부모창이 focus를 받았을 때 실행되는 함수
+        function showMsg() {
+            document.write("load 하자마자 열린 공지창이 <br> 3초 후에 자동으로 닫혔습니다.");
+        }
+    </script>
+</head>
+<!-- onload 는 window의 loading이 완료되었을때 발생 -->
+<body onload="openInfo()" onfocus="showMsg()">
+부모창입니다.
+</body>
+</html>

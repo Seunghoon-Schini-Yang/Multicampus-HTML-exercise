@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementById_image</title>
+    <!-- image와 변경 button 출력 - 변경 button을 누르면 image를 교체하고 button의 text도 완료로 변경 -->
+    <script type="text/javascript">
+        var imageA ;
+        var hint ;
+        var changeButton ;
+
+        // window가 load되면 해당 element object 저장
+        window.onload = function() {
+            imageA = document.getElementById("imageA");
+            hint = document.getElementById("hint");
+            changeButton = document.getElementById("changeButton");
+        }
+        // 요소 속성 변환 ㅎ마수
+        function change() {
+            imageA.src = 'image/B.png' ; // image 교체
+            hint.innerHTML = '새로운 image로 변경되었습니다.' ;
+            hint.style.background = 'red' ;
+            changeButton.innerHTML = '완료' ;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <img id="imageA" src="image/A.png">
+        <div id="hint">[변경] 버튼을 누르면 이미지가 바뀝니다.</div>
+        <button id="changeButton" onclick="change()">변경</button>
+    </center>
+</body>
+</html>

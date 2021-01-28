@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>button에서fucntion호출</title>
+    <script type="text/javascript">
+        function input() { // button click할 때 호출
+            var color = prompt("색상 입력 : red/blue/green");
+            document.bgColor = color;
+        }
+    </script>
+</head>
+<body>
+<!-- button에 click event handler (function) 연결 -->
+    <button onclick="input()">색상입력</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text()/html()</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            var $aText = $('#a').text(); // id a tag 내 text 반환
+            alert("text:" + $aText);
+
+            var $bText = $('#b').html(); // id a 내부 tag 반환
+            alert("text:" + $bText);
+
+            $('#a').text('<h1>jQuery</h1>');
+            $('#b').html('<h1>jQuery</h1>');
+        });
+    </script>
+</head>
+<body>
+    <div id="a"><h3>A</h3></div>
+    <div id="b"><h3>B</h3></div>
+</body>
+</html>

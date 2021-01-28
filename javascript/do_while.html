@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>do_while</title>
+    <script type="text/javascript">
+        var answer;
+        var count=0;
+
+        do{
+            count++;
+            alert("경고" + count);
+            answer=confirm("계속 경고창을 보시겠습니까?");
+        }while(answer); //answer 가 true면 반복
+
+        document.write("경고장 출력 횟수:"+count);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

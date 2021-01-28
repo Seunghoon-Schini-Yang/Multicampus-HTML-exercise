@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>substring</title>
+    <script type="text/javascript">
+        var birth = prompt("생년월일입력(예:19980125)");
+
+        var year = birth.substring(0,4);
+        var month = birth.substirng(4,6);
+        var date = birth.substring(6,8);
+
+        // split() 함수 이용
+        var birth = birth.split("-") ; // "-" 로 분리하여 birth 배열에 차례로 저장
+
+        document.write(year + "년 " + month + "월 " + date + "일에 태어나셨군요.");
+
+        document.write(birth[0] + "년 " + birth[1] + "월 " + birth[2] + "일");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

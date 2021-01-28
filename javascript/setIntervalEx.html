@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setIntervalEx</title>
+    <script type="text/javascript">
+        var count=0 ;
+
+        function start() {
+            alert("이미지 10개 출력");
+            timerID = setInterval("showImg()",1000);
+        }
+
+        function showImg() {
+            count++;
+            if(count%2==1) {
+                document.body.innerHTML += "<img src='image/apple.png'>";
+            }
+            else {
+                document.body.innerHTML += "<img src='image/bomb.png'>";
+            }
+            if(count==10) {
+                clearInterval(timerID);
+            }
+        }
+    </script>
+</head>
+<body onLoad="start()">
+</body>
+</html>

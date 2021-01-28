@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forEx1</title>
+    <script type="text/javascript">
+        var pos = 0;
+        var neg = 0;
+        var zero = 0;
+
+        for(var i=1; i<=10; i++){
+            var no = parseInt(prompt("숫자 " + i + " 입력 :"));
+            if(no>0){pos += 1;} // pos++;
+            else if(no<0){neg += 1;} // neg++;
+            else{zero += 1;} // zero++;
+            }
+
+        document.write("양수의 개수 : " + pos + "<br>");
+        document.write("음수의 개수 : " + neg + "<br>");
+        document.write("0의 개수 : " + zero);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

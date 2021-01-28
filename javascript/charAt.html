@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>charAt</title>
+    <script type="text/javascript">
+        var input = prompt("숫자입력");
+        // 유효성 검사 code
+        // 모든 숫자를 하나씩 검색해서 숫자가 아니면 경고창 출하고 for문 중단
+        for (var i=0; i<input.length; i++) {
+            if(!('0'<=input.charAt(i) && input.charAt(i)<='9')) {
+                alert('숫자형식이 아닙니다.');
+                break; // for문 중단
+                }
+                }
+        document.write(input);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
